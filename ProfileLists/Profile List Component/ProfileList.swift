@@ -81,6 +81,7 @@ class ProfileList: UIViewController{
         adjustView()
         
         if self.ageSortSegmentControl.selectedSegmentIndex != 0 && self.genderSortSegmentControl.selectedSegmentIndex != 0 {
+            self.filterGender(selection: self.genderFilterSegmentControl.selectedSegmentIndex)
             self.profiles.sort {
                 if $0.gender != $1.gender  {
                     switch self.genderSortSegmentControl.selectedSegmentIndex {
@@ -103,15 +104,16 @@ class ProfileList: UIViewController{
             }
         }
         else if self.ageSortSegmentControl.selectedSegmentIndex == 0 && self.genderSortSegmentControl.selectedSegmentIndex == 0 && self.genderFilterSegmentControl.selectedSegmentIndex == 0{
+            self.filterGender(selection: self.genderFilterSegmentControl.selectedSegmentIndex)
             self.profiles = self.originalProfileArray
             self.tableView.reloadData()
             return
         }
         else {
+            self.filterGender(selection: self.genderFilterSegmentControl.selectedSegmentIndex)
             self.sortGender(selection: self.genderSortSegmentControl.selectedSegmentIndex)
             self.sortAge(selection: self.ageSortSegmentControl.selectedSegmentIndex)
         }
-        self.filterGender(selection: self.genderFilterSegmentControl.selectedSegmentIndex)
         self.tableView.reloadData()
     }
     
@@ -189,7 +191,7 @@ extension ProfileList {
         case 1:
             self.profiles = self.originalProfileArray.filter{ $0.gender == "male"}
         default:
-            print("default")
+            self.profiles = self.originalProfileArray
         }
     }
     
