@@ -1,7 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,7 +18,40 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5jK-Q1-ZHE">
+                                <rect key="frame" x="130" y="193" width="115" height="132"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="110"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g2h-DZ-zNk">
+                                <rect key="frame" x="67" y="333" width="240" height="1"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="F8F-ZP-X9a"/>
+                                    <constraint firstAttribute="width" constant="240" id="XbE-Ce-MW7"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PROFILE LIST" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKt-0C-F4u">
+                                <rect key="frame" x="114" y="342" width="146" height="32"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.39215686274509803" green="0.14117647058823529" blue="0.98431372549019602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fKt-0C-F4u" secondAttribute="trailing" constant="115" id="Cg0-J5-ssW"/>
+                            <constraint firstItem="fKt-0C-F4u" firstAttribute="top" secondItem="g2h-DZ-zNk" secondAttribute="bottom" constant="8" id="FsF-z5-vZY"/>
+                            <constraint firstItem="g2h-DZ-zNk" firstAttribute="top" secondItem="5jK-Q1-ZHE" secondAttribute="bottom" constant="8" id="L3O-0W-mzB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="g2h-DZ-zNk" secondAttribute="trailing" constant="52" id="OMH-A0-YtO"/>
+                            <constraint firstItem="5jK-Q1-ZHE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="173" id="e3Q-Fj-3wX"/>
+                            <constraint firstItem="g2h-DZ-zNk" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="gME-ud-8gU"/>
+                            <constraint firstItem="fKt-0C-F4u" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="114" id="koE-9S-IQ4"/>
+                            <constraint firstItem="5jK-Q1-ZHE" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="lZb-V4-7VP"/>
+                            <constraint firstItem="g2h-DZ-zNk" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="51" id="nsy-GP-Of5"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
