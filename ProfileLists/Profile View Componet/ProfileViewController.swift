@@ -88,6 +88,7 @@ class ProfileViewController: UITableViewController {
             tableView.register(UINib(nibName: "ProfileHeader", bundle: nil), forCellReuseIdentifier: "ProfileHeader")
             let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileHeader", for: indexPath) as! ProfileHeader
             cell.setupCell(profile: profile)
+            cell.selectionStyle = .none
             return cell
         }
         else if indexPath.row == 1 {
